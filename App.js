@@ -3,7 +3,7 @@ import React from 'react'
 
 const App = () => {
   return (
-    <View>
+    <View style={styles.page}>
       <Text>App</Text>
     </View>
   )
@@ -11,4 +11,10 @@ const App = () => {
 
 export default App
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  page: {
+    flex: 1,
+    backgroundColor: 'white',
+    paddingTop: 30,
+  }
+})
