@@ -36,14 +36,18 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { createStackNavigator } from '@react-navigation/stack'
+
 import Screen1 from './screens/Screen1'
 import Screen2 from './screens/Screen2'
 import Screen3 from './screens/Screen3'
+// import { createStackNavigator } from '@react-navigation/stack'
 
 
 const App = () => {
 
   const Tab = createBottomTabNavigator();
+  const Stack = createStackNavigator()
 
   return (
     <NavigationContainer>
