@@ -47,7 +47,7 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator screenOptions={{ headerShown: false }}>
         <Tab.Screen name='Screen1' component={Screen1} />
         <Tab.Screen name='Screen2' component={Screen2} />
         <Tab.Screen name='Screen3' component={Screen3} />
