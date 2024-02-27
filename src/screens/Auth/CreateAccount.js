@@ -3,12 +3,12 @@ import React from 'react'
 
 const CreateAccount = () => {
 
-    const InputContainer = () => {
+    const InputContainer = ({ title, placeholder }) => {
         return (
             <View style={{ marginBottom: 10, }}>
-                <Text style={{ fontSize: 16, color: 'black', marginBottom: 5 }}>Full Name</Text>
+                <Text style={{ fontSize: 16, color: 'black', marginBottom: 5 }}>{title}</Text>
                 <TextInput
-                    placeholder='Enter your Name'
+                    placeholder={placeholder}
                     style={styles.input}
                 />
             </View>
@@ -21,9 +21,9 @@ const CreateAccount = () => {
             <Text style={{ fontSize: 30, color: 'black', fontWeight: 'bold', marginBottom: 20 }}>Register</Text>
 
             <View>
-                <InputContainer />
-                <InputContainer />
-                <InputContainer />
+                <InputContainer title={"Full Name"} placeholder={"Enter your name"} />
+                <InputContainer title={"Email"} placeholder={"Enter your email"} />
+                <InputContainer title={"Password"} placeholder={"Enter your password"} />
             </View>
         </View>
     )
