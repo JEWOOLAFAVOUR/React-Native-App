@@ -2,12 +2,14 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import SplashScreen from '../screens/Auth/SplashScreen';
+import CreateAccount from '../screens/Auth/CreateAccount';
 
 const StackNavigator = () => {
     const Stack = createStackNavigator();
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name='SplashScreen' component={SplashScreen} />
+            <Stack.Screen name='CreateAccount' component={CreateAccount} />
         </Stack.Navigator>
     )
 }

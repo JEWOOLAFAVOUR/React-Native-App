@@ -1,10 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const SplashScreen = () => {
+const SplashScreen = ({ navigation }) => {
     return (
         <View style={styles.page}>
-            <Text style={{ fontSize: 30, color: 'white', fontWeight: 'bold' }}>SplashScreen</Text>
+            <TouchableOpacity onPress={() => navigation.navigate('CreateAccount')}>
+                <Text style={{ fontSize: 30, color: 'white', fontWeight: 'bold' }}>SplashScreen</Text>
+            </TouchableOpacity>
         </View>
     )
 }
