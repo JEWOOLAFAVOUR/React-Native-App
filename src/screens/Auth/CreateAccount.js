@@ -1,19 +1,9 @@
-import { StyleSheet, Text, View, TextInput } from 'react-native'
+import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 import React from 'react'
+import FormInput from '../../components/Input/FormInput'
+import FormButton from '../../components/Button/FormButton'
 
-const CreateAccount = () => {
-
-    const InputContainer = ({ title, placeholder }) => {
-        return (
-            <View style={{ marginBottom: 10, }}>
-                <Text style={{ fontSize: 16, color: 'black', marginBottom: 5 }}>{title}</Text>
-                <TextInput
-                    placeholder={placeholder}
-                    style={styles.input}
-                />
-            </View>
-        )
-    }
+const CreateAccount = ({ navigation }) => {
 
 
     return (
@@ -21,9 +11,17 @@ const CreateAccount = () => {
             <Text style={{ fontSize: 30, color: 'black', fontWeight: 'bold', marginBottom: 20 }}>Register</Text>
 
             <View>
-                <InputContainer title={"Full Name"} placeholder={"Enter your name"} />
-                <InputContainer title={"Email"} placeholder={"Enter your email"} />
-                <InputContainer title={"Password"} placeholder={"Enter your password"} />
+                <FormInput title={"Full Name"} placeholder={"Enter your name"} />
+                <FormInput title={"Email"} placeholder={"Enter your email"} />
+                <FormInput title={"Password"} placeholder={"Enter your password"} />
+            </View>
+            <FormButton title={"Sign up"} />
+
+            <View style={{ marginTop: 20, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
+                <Text style={{ fontSize: 15, color: 'black' }}>Already have an account?</Text>
+                <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                    <Text style={{ fontSize: 15, color: 'red', fontWeight: 'bold' }}> Sign in</Text>
+                </TouchableOpacity>
             </View>
         </View>
     )
@@ -37,12 +35,5 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         paddingHorizontal: 20,
         paddingTop: 30,
-    },
-    input: {
-        height: 40,
-        borderWidth: 1,
-        borderRadius: 5,
-        fontSize: 13,
-        paddingHorizontal: 10
     },
 })
