@@ -1,9 +1,9 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const FormButton = ({ navigation, title }) => {
+const FormButton = ({ title }) => {
     return (
-        <TouchableOpacity onPress={() => navigation.navigate('Login')} style={styles.submitCtn}>
+        <TouchableOpacity style={styles.submitCtn}>
             <Text style={{ fontSize: 15, color: 'white' }}>{title}</Text>
         </TouchableOpacity>
     )
