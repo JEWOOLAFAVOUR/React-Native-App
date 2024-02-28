@@ -3,7 +3,7 @@ import React from 'react'
 import FormInput from '../../components/Input/FormInput'
 import FormButton from '../../components/Button/FormButton'
 
-const Login = () => {
+const Login = ({ navigation }) => {
 
     return (
         <View style={styles.page}>
@@ -13,7 +13,7 @@ const Login = () => {
                 <FormInput title={"Email"} placeholder={"Enter your email"} />
                 <FormInput title={"Password"} placeholder={"Enter your password"} />
             </View>
-            <FormButton title={"Sign in"} />
+            <FormButton title={"Sign in"} onPress={() => navigation.navigate('Bottom')} />
         </View>
     )
 }
