@@ -7,7 +7,10 @@ const Login = ({ navigation }) => {
 
     return (
         <View style={styles.page}>
-            <Image />
+            <TouchableOpacity onPress={() => navigation.goBack()}>
+                <Image source={require('../../../assets/arrowleft.png')} style={{ height: 30, width: 30 }} />
+            </TouchableOpacity>
+
             <Text style={{ fontSize: 30, color: 'black', fontWeight: 'bold', marginBottom: 20 }}>Login</Text>
 
             <View>
