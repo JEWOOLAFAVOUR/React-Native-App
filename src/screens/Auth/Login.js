@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
 import FormInput from '../../components/Input/FormInput'
 import FormButton from '../../components/Button/FormButton'
@@ -7,6 +7,7 @@ const Login = ({ navigation }) => {
 
     return (
         <View style={styles.page}>
+            <Image />
             <Text style={{ fontSize: 30, color: 'black', fontWeight: 'bold', marginBottom: 20 }}>Login</Text>
 
             <View>
