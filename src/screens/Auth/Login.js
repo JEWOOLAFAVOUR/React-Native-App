@@ -17,7 +17,7 @@ const Login = ({ navigation }) => {
                 <FormInput title={"Email"} placeholder={"Enter your email"} />
                 <FormInput title={"Password"} placeholder={"Enter your password"} />
             </View>
-            <FormButton title={"Sign in"} onPress={() => navigation.navigate('Bottom')} />
+            <FormButton title={"Sign in"} onPress={() => navigation.navigate('Main')} />
         </View>
     )
 }

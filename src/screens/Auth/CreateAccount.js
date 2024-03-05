@@ -19,7 +19,7 @@ const CreateAccount = ({ navigation }) => {
 
             <View style={{ marginTop: 20, flexDirection: 'row', alignItems: 'center', justifyContent: 'center' }}>
                 <Text style={{ fontSize: 15, color: 'black' }}>Already have an account?</Text>
-                <TouchableOpacity onPress={() => navigation.navigate('Silvernus')}>
+                <TouchableOpacity onPress={() => navigation.navigate('Login')}>
                     <Text style={{ fontSize: 15, color: 'red', fontWeight: 'bold' }}> Sign in</Text>
                 </TouchableOpacity>
             </View>
