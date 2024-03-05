@@ -8,7 +8,7 @@ import ProductDetailScreen from '../screens/Main/Home/ProductDetailScreen';
 const AppStack = () => {
     const Stack = createStackNavigator();
     return (
-        <Stack.Navigator>
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name='Bottom' component={BottomNavigator} />
 
 

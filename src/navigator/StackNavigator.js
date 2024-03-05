@@ -11,6 +11,7 @@ const StackNavigator = () => {
         <Stack.Navigator screenOptions={{ headerShown: false }}>
             <Stack.Screen name='SplashScreen' component={SplashScreen} />
             <Stack.Screen name='CreateAccount' component={CreateAccount} />
+            <Stack.Screen name='Login' component={Login} />
         </Stack.Navigator>
     )
 }

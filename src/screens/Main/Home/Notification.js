@@ -1,10 +1,24 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, FlatList } from 'react-native'
 import React from 'react'
 
-const Notification = () => {
+const Notification = ({ route }) => {
+
+    const data = route.params.favour;
+
+    console.log('ddddddddddddddddd', data)
+
     return (
         <View>
-            <Text>Notification</Text>
+            <FlatList
+                data={data}
+                renderItem={({ item }) => {
+                    return (
+                        <View>
+                            <Text>{item.title}</Text>
+                        </View>
+                    )
+                }}
+            />
         </View>
     )
 }

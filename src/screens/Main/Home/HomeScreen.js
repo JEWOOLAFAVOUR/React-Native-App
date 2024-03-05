@@ -1,24 +1,37 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native'
+import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
 
-const HomeScreen = () => {
-    const nameData = ['All', "Men's", "Women", "Children", "Female", "Male"];
+const HomeScreen = ({ navigation }) => {
+    const homeData = [
+        { id: 1, title: "Ade", detail: "Good Boy" },
+        { id: 2, title: "Favour", detail: "Good Boy" },
+        { id: 3, title: "Silvernus", detail: "Good Boy" },
+        { id: 4, title: "Lola", detail: "Good Boy" },
+        { id: 5, title: "Lola", detail: "Good Boy" },
+        { id: 6, title: "Lola", detail: "Good Boy" },
+        { id: 7, title: "Lola", detail: "Good Boy" },
+    ];
+
+
+
     return (
         <View style={styles.page}>
-            <Text style={{ fontSize: 30, }}>HomeScreen</Text>
-
+            <TouchableOpacity onPress={() => navigation.navigate('Notification', { favour: homeData })}>
+                <Text style={{ fontSize: 30, }}>Notification</Text>
+            </TouchableOpacity>
             <FlatList
-                data={nameData}
-                showsHorizontalScrollIndicator={false}
-                horizontal={true}
+                data={homeData}
+                numColumns={2}
+                columnWrapperStyle={{ justifyContent: 'space-between' }}
                 renderItem={({ item }) => {
                     return (
-                        <View style={styles.container}>
-                            <Text style={{ fontSize: 16, color: 'white' }}>{item}</Text>
-                        </View>
+                        <TouchableOpacity onPress={() => navigation.navigate("ProductDetailScreen", { silvernus: item })} style={styles.container}>
+                            <Text style={{ color: 'white', fontSize: 17 }}>{item.title}</Text>
+                        </TouchableOpacity>
                     )
                 }}
             />
+
         </View>
     )
 }
@@ -33,12 +46,12 @@ const styles = StyleSheet.create({
         paddingTop: 20,
     },
     container: {
-        paddingHorizontal: 13,
-        height: 35,
-        backgroundColor: 'red',
+        height: 100,
+        width: 100,
+        backgroundColor: 'blue',
         borderRadius: 10,
+        marginBottom: 30,
         justifyContent: 'center',
         alignItems: 'center',
-        marginRight: 10
     },
 })
