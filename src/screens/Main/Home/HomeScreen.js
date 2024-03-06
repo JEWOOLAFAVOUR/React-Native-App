@@ -1,16 +1,11 @@
 import { StyleSheet, Text, View, FlatList, TouchableOpacity } from 'react-native'
 import React from 'react'
+import { homeData } from './components/data'
+import { nameData } from './components/data'
+
 
 const HomeScreen = ({ navigation }) => {
-    const homeData = [
-        { id: 1, title: "Ade", detail: "Good Boy" },
-        { id: 2, title: "Favour", detail: "Good Boy" },
-        { id: 3, title: "Silvernus", detail: "Good Boy" },
-        { id: 4, title: "Lola", detail: "Good Boy" },
-        { id: 5, title: "Lola", detail: "Good Boy" },
-        { id: 6, title: "Lola", detail: "Good Boy" },
-        { id: 7, title: "Lola", detail: "Good Boy" },
-    ];
+
 
 
 
