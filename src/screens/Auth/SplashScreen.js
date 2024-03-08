@@ -4,7 +4,8 @@ import React from 'react'
 const SplashScreen = ({ navigation }) => {
     return (
         <View style={styles.page}>
-            <TouchableOpacity onPress={() => navigation.navigate('CreateAccount')}>
+            <TouchableOpacity onPress={() => navigation.navigate('FormScreen')}>
+                {/* <TouchableOpacity onPress={() => navigation.navigate('CreateAccount')}> */}
                 <Text style={{ fontSize: 30, color: 'white', fontWeight: 'bold' }}>SplashScreen</Text>
             </TouchableOpacity>
         </View>

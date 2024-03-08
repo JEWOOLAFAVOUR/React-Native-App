@@ -1,15 +1,25 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 
-const FormScreen = () => {
+const FormScreen = ({ navigation }) => {
     const [name, setName] = useState('')
     const [password, setPassword] = useState('')
 
-    console.log('the output of the text input', name, password)
+    // console.log('the output of the text input', name, password)
+    // console.log('Name: ', name)
+    // console.log('Password: ', password)
 
+    const handleSubmit = () => {
+        const body = { name, password }
+
+        console.log('this is the body', body)
+
+        // navigation.navigate('Login')
+
+    }
 
     return (
-        <View>
+        <View style={styles.page}>
             <View style={{ marginBottom: 20 }}>
                 <Text style={{ fontSize: 15, color: 'black', fontWeight: 'bold', marginBottom: 10 }}>Enter your name</Text>
                 <View style={styles.inputCtn}>
@@ -31,7 +41,7 @@ const FormScreen = () => {
                 </View>
             </View>
 
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity onPress={() => handleSubmit()} style={styles.button}>
                 <Text style={{ fontSize: 15, color: '#fff', fontWeight: 'bold' }}>Next Screen</Text>
             </TouchableOpacity>
         </View>
@@ -46,12 +56,13 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         paddingTop: 30,
         paddingHorizontal: 30,
+
     },
     inputCtn: {
         height: 40,
         borderWidth: 2,
         justifyContent: 'center',
-        paddingHorizontal: 30,
+        paddingHorizontal: 15,
     },
     button: {
         height: 40,
