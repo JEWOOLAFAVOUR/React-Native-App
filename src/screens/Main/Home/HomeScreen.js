@@ -1,22 +1,18 @@
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React, { useState } from 'react'
 
 const HomeScreen = () => {
-    // const name = 'Silvernus'
 
-
-    const [name, setName] = useState('Silvernus')
+    const [data, setData] = useState('Favour')
 
 
     return (
         <View style={styles.page}>
-            <Text style={{ fontSize: 20, color: 'black' }}>My name is {name}</Text>
+            <Text style={{ fontSize: 30, color: 'black', fontWeight: 'bold' }}>React Hooks Class - useState</Text>
 
-            <View style={{ marginTop: 50 }}>
-                <Button title='Change' color={'blue'}
-                    onPress={() => setName('Favour')}
-                />
-            </View>
+            <TouchableOpacity style={styles.button}>
+                <Text style={{ fontSize: 15, color: '#fff', fontWeight: 'bold' }}>Change Text</Text>
+            </TouchableOpacity>
         </View>
     )
 }
@@ -27,5 +23,15 @@ const styles = StyleSheet.create({
     page: {
         flex: 1,
         backgroundColor: 'white',
+        paddingTop: 30,
+        paddingHorizontal: 30,
+    },
+    button: {
+        height: 40,
+        backgroundColor: 'blue',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 10,
+        marginTop: 30,
     },
 })
