@@ -1,23 +1,22 @@
 import { StyleSheet, Text, View, FlatList } from 'react-native'
 import React from 'react'
 
-const Notification = ({ route }) => {
+const Notification = () => {
 
-    const data = route.params.favour;
+    const RenderTemplate = ({ data }) => {
+        return (
+            <View>
+                <Text>{data}</Text>
+            </View>
+        )
+    }
 
-    console.log('ddddddddddddddddd', data)
 
     return (
         <View>
             <FlatList
-                data={data}
-                renderItem={({ item }) => {
-                    return (
-                        <View>
-                            <Text>{item.title}</Text>
-                        </View>
-                    )
-                }}
+                data={['Ade', 'Jidi']}
+                renderItem={({ item }) => <RenderTemplate data={item} />}
             />
         </View>
     )
