@@ -1,10 +1,29 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const SplashScreen = ({ navigation }) => {
+
+    const [data, setData] = useState('Silvernus')
+
+    const handleNavigate = () => {
+        setTimeout(() => {
+            navigation.navigate("Main", { screen: "Bottom" })
+        }, 2000)
+    }
+
+    useEffect(() => {
+        handleNavigate();
+    }, [])
+
+
+    useEffect(() => {
+
+    }, [])
+
+
     return (
         <View style={styles.page}>
-            <TouchableOpacity onPress={() => navigation.navigate('FormScreen')}>
+            <TouchableOpacity>
                 {/* <TouchableOpacity onPress={() => navigation.navigate('CreateAccount')}> */}
                 <Text style={{ fontSize: 30, color: 'white', fontWeight: 'bold' }}>SplashScreen</Text>
             </TouchableOpacity>
